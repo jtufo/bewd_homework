@@ -1,0 +1,7 @@
+<h2>These are all the users</h2>
+
+<h3>Users:</h3>
+
+<% @users.each do |user| %>  
+  <div><%= user.username %>: <%= user.password %></div>
+<% end %>
