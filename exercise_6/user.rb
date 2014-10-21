@@ -1,7 +1,7 @@
 $session = nil
 
 class User
-  attr_accessor :username, :password
+  attr_accessor :username, :password, :tweet_content
 
   $user_list = []
 
@@ -11,6 +11,7 @@ class User
     else
       @username = username
       @password = password
+      @tweet_content = []
 
       # or, which puts it into the array
       # $user_list << User.new(username, password)
@@ -37,6 +38,13 @@ class User
       end
     end
   end
+
+  def tweet(tweet_content)
+    new_tweet = Twitter.add_tweet(tweet_content)
+    @tweet_content.push({tweet_content: new_tweet})
+  end
+
+
 
   def sign_out 
     if $session != nil
