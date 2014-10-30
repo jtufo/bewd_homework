@@ -1,0 +1,44 @@
+body {
+  font: {
+    family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    size: 14px;
+  }
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+}
+
+nav {
+  ul {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+      a {
+        border-right: none;
+      }
+    }
+
+    a {
+      border-right: 1px solid #d5d5d5;
+      display: block;
+      font-weight: bold;
+      color: #777;
+      padding: 10px 15px;
+      text-align: center;
+    }
+  }
+}
